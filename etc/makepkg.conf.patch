@@ -1,0 +1,13 @@
+A patch to makepkg config to disable package compression
+
+--- /.snapshots/1/snapshot/etc/makepkg.conf	2024-03-15 20:09:33.000000000 +0100
++++ /etc/makepkg.conf	2024-04-13 20:28:32.220050607 +0200
+@@ -155,7 +155,7 @@
+ # EXTENSION DEFAULTS
+ #########################################################################
+ #
+-PKGEXT='.pkg.tar.zst'
++PKGEXT='.pkg.tar' # .zst
+ SRCEXT='.src.tar.gz'
+ 
+ #########################################################################

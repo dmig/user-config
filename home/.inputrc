@@ -1,0 +1,17 @@
+# Respect default shortcuts.
+$include /etc/inputrc
+
+# Ctrl+Backspace
+"\C-h": backward-kill-word
+# Ctrl+Del
+"\e[3;5~": kill-word
+
+# Arrow up
+"\e[A": history-search-backward
+# Arrow down
+"\e[B": history-search-forward
+
+# Ctrl+Right
+"\e[1;5C": forward-word
+# Ctrl+Left
+"\e[1;5D": backward-word
