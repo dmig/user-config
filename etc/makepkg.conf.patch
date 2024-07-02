@@ -1,7 +1,16 @@
-A patch to makepkg config to disable package compression
+A patch to makepkg config to disable debug package building and package compression.
 
 --- /.snapshots/1/snapshot/etc/makepkg.conf	2024-03-15 20:09:33.000000000 +0100
-+++ /etc/makepkg.conf	2024-04-13 20:28:32.220050607 +0200
++++ /etc/makepkg.conf	2024-04-17 10:19:42.287396619 +0200
+@@ -97,7 +97,7 @@
+ #-- lto:        Add compile flags for building with link time optimization
+ #-- autodeps:   Automatically add depends/provides
+ #
+-OPTIONS=(strip docs !libtool !staticlibs emptydirs zipman purge debug lto)
++OPTIONS=(strip docs !libtool !staticlibs emptydirs zipman purge !debug lto)
+ 
+ #-- File integrity checks to use. Valid: md5, sha1, sha224, sha256, sha384, sha512, b2
+ INTEGRITY_CHECK=(sha256)
 @@ -155,7 +155,7 @@
  # EXTENSION DEFAULTS
  #########################################################################
