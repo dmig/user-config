@@ -1,8 +1,15 @@
-A patch to makepkg config to disable debug package building and package compression.
-
---- /.snapshots/1/snapshot/etc/makepkg.conf	2024-03-15 20:09:33.000000000 +0100
-+++ /etc/makepkg.conf	2024-04-17 10:19:42.287396619 +0200
-@@ -97,7 +97,7 @@
+--- /etc/makepkg.conf.pacnew	2024-09-14 13:57:56.000000000 +0200
++++ /etc/makepkg.conf	2024-09-27 09:15:44.516905112 +0200
+@@ -40,7 +40,7 @@
+ 
+ #-- Compiler and Linker Flags
+ #CPPFLAGS=""
+-CFLAGS="-march=x86-64 -mtune=generic -O2 -pipe -fno-plt -fexceptions \
++CFLAGS="-march=native -O2 -pipe -fno-plt -fexceptions \
+         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security \
+         -fstack-clash-protection -fcf-protection \
+         -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer"
+@@ -95,7 +95,7 @@
  #-- lto:        Add compile flags for building with link time optimization
  #-- autodeps:   Automatically add depends/provides
  #
@@ -11,7 +18,7 @@ A patch to makepkg config to disable debug package building and package compress
  
  #-- File integrity checks to use. Valid: md5, sha1, sha224, sha256, sha384, sha512, b2
  INTEGRITY_CHECK=(sha256)
-@@ -155,7 +155,7 @@
+@@ -153,7 +153,7 @@
  # EXTENSION DEFAULTS
  #########################################################################
  #
