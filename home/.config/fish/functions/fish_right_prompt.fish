@@ -1,7 +1,7 @@
 function fish_right_prompt -d "Show active virtualenv"
-    if set -q PYENV_VIRTUAL_ENV;
-        set_color -d black;
-        basename $PYENV_VIRTUAL_ENV;
-        set_color normal;
+    if set -q VIRTUAL_ENV
+        set_color -d grey
+        basename $VIRTUAL_ENV
+        set_color normal
     end
 end
