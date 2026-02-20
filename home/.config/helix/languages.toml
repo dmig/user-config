@@ -11,3 +11,11 @@ args = ["server"]
 name = "python"
 language-servers = ["ty", "ruff"]
 auto-format = true
+
+[[language]]
+name = "devicetree"
+language-servers = ["ginko_ls"]
+
+[language-server.ginko_ls]
+command = "ginko_ls"
+config = { provideFormatter = false }
