@@ -1,0 +1,2 @@
+inherits = "adwaita-light"
+"ui.background" = { fg = "foreground" }
