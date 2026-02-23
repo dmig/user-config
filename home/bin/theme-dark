@@ -1,0 +1,3 @@
+#! /bin/fish
+gsettings set org.gnome.desktop.interface accent-color purple
+sed -i '/^theme = /s/light/dark/' ~/.config/helix/config.toml && killall -USR1 helix
